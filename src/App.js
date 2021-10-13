@@ -1,8 +1,10 @@
-import './App.css';
+import style from './App.module.css';
+import Homepage from './components/Homepage/Homepage';
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.main}>
+      <Homepage />
     </div>
   );
 }
