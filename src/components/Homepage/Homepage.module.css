@@ -107,20 +107,3 @@
   }
 }
 
-@keyframes border {
-  0% {
-    border: 0px solid #e0ef10;
-  }
-  25% {
-    border: 5px solid #e0ef10;
-  }
-  50% {
-    border: 5px solid #e0ef10;
-  }
-  75% {
-    border: 5px solid #e0ef10;
-  }
-  100% {
-    border: 5px solid #e0ef10;
-  }
-}
