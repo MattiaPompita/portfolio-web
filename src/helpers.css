@@ -1,3 +1,9 @@
 .spacer-sm {
     height: 50px;
 }
+
+@media only screen and (max-width: 1920px) {
+    .spacer-sm {
+        height: 30px;
+    }
+}

@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.main::after {
+/* .main::after {
   content: "";
   background-image: url("../../img/ep_naturalblack.png");
   height: 300%;
@@ -14,7 +14,7 @@
   opacity: 0.4;
   position: fixed;
   animation: grain 24s steps(25) infinite;
-}
+} */
 
 .container {
   width: 1920px;
@@ -55,12 +55,37 @@
   height: 500px;
   background-image: url("../../img/circlePic.png");
   border: 5px solid #e0ef10;
-
+  background-size: cover;
 }
 
 .circle:hover {
   animation: border 0.4s ease 1 forwards;
   cursor: none;
+}
+
+
+@media only screen and (max-width: 1920px) {
+  .container {
+    width: 1140px;
+  }
+
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+
+  .scrollDown-container p {
+    font-size: 0.8rem;
+  }
+
+  .line {
+    width: 50px;
+  }
 }
 
 @keyframes grain {
@@ -106,4 +131,3 @@
     transform: translate(-10%, 10%);
   }
 }
-

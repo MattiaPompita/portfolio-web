@@ -1,6 +1,13 @@
+import { useState } from "react";
 import style from "./Homepage.module.css";
 
 const Homepage = () => {
+  const [isFlip, setFlip] = useState(false);
+
+  const rotatePic = () => {
+    setFlip((prevState) => !prevState);
+  };
+
   return (
     <div className={style.main}>
       <div className={style.container}>
@@ -17,19 +24,11 @@ const Homepage = () => {
           </div>
         </div>
         <div className={style.pic}>
-          <div className={style.circle}>
-            
-          </div>
-          {/* <svg height="400" width="400">
-            <circle
-              cx="200"
-              cy="200"
-              r="200"
-              stroke="black"
-              stroke-width="3"
-              fill="red"
-            />
-          </svg> */}
+          <div
+            // className={`${!isFlip ? style.front : style.back}`}
+            className={style.circle}
+            onClick={rotatePic}
+          ></div>
         </div>
       </div>
     </div>
