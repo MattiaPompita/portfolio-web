@@ -3,11 +3,25 @@
 html {
   font-size: 20px;
   font-family: "Montserrat", "sans-serif";
+  overflow-x: hidden;
 }
 
 .main {
-  background-color: #000500;
+  background-image: url("img/wickedbackground (1).svg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
+
+.main::after {
+  content: "";
+  background-image: url("img/ep_naturalblack.png");
+  height: 300%;
+  width: 300%;
+  opacity: 0.5;
+  position: fixed;
+  animation: grain 24s steps(25) infinite;
+} 
 
 strong {
     color: #E0EF10;

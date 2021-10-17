@@ -1,0 +1,81 @@
+.circleThumbnail {
+  margin-bottom: 50px;
+}
+
+.flipPic {
+  perspective: 1000px;
+  z-index: auto;
+}
+
+.flipperPic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circleFront {
+  backface-visibility: hidden;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.6s ease 0s;
+}
+
+.circleFront2 {
+  backface-visibility: hidden;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.6s ease 0s;
+}
+
+.circleBack {
+  backface-visibility: hidden;
+  left: 0px;
+  position: absolute;
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease 0s;
+}
+
+.circleBack2 {
+  backface-visibility: hidden;
+  left: 0px;
+  position: relative;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease 0s;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.pic {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 5px solid #e0ef10;
+}
+
+@media only screen and (max-width: 1920px) {
+  .pic {
+    height: 400px;
+    width: 400px;}
+}

@@ -4,17 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 /* .main::after {
   content: "";
-  background-image: url("../../img/ep_naturalblack.png");
+  background-image: url("../img/8.svg");
   height: 300%;
   width: 300%;
-  opacity: 0.4;
+  opacity: 0.5;
   position: fixed;
   animation: grain 24s steps(25) infinite;
-} */
+}  */
 
 .container {
   width: 1920px;
@@ -38,53 +39,59 @@
 
 .line {
   height: 1px;
-  width: 70px;
   background-color: rgba(241, 255, 250, 0.58);
+  opacity: 0;
+  width: 0;
+
+  animation: widthAnimation 2.5s ease-in-out 0s 1 normal forwards;
 }
 
-.scrollDown-container p {
+.scrollDown{
   color: rgba(241, 255, 250, 0.58);
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 400;
   margin-left: 1rem;
+  letter-spacing: 2px;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  background-image: url("../../img/circlePic.png");
-  border: 5px solid #e0ef10;
-  background-size: cover;
+.M-20,
+.a-21,
+.t-22,
+.t-23,
+.i-24,
+.a-25,
+.f-3,
+.r-4,
+.o-5,
+.n-6,
+.t-7,
+.--8,
+.e-9,
+.n-10,
+.d-11,
+.d-13,
+.e-14,
+.v-15,
+.line3.e-16,
+.l-17,
+.o-18,
+.p-19,
+.e-20,
+.r-21 {
+  color: #e0ef10;
 }
 
-.circle:hover {
-  animation: border 0.4s ease 1 forwards;
-  cursor: none;
-}
+/*------- MEDIA QUERY -------*/
 
-
-@media only screen and (max-width: 1920px) {
-  .container {
-    width: 1140px;
+@keyframes widthAnimation {
+  from {
+    width: 0;
+    opacity: 0;
   }
 
-  .circle {
-    width: 300px;
-    height: 300px;
-  }
-
-  .header h1 {
-    font-size: 2rem;
-    line-height: 50px;
-  }
-
-  .scrollDown-container p {
-    font-size: 0.8rem;
-  }
-
-  .line {
-    width: 50px;
+  to {
+    width: 10%;
+    opacity: 1;
   }
 }
 
@@ -129,5 +136,20 @@
   90% {
     -webkit-transform: translate(-10%, 10%);
     transform: translate(-10%, 10%);
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .container {
+    width: 1680px;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+    line-height: 60px;
+  }
+
+  .scrollDown-container p {
+    font-size: 0.8rem;
   }
 }

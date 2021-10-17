@@ -1,11 +1,14 @@
-import style from './App.module.css';
-import Homepage from './components/Homepage/Homepage';
+import { Fragment } from "react";
+import style from "./App.module.css";
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
-    <div className={style.main}>
-      <Homepage />
-    </div>
+    <Fragment>
+      <div className={style.main}>
+        <Homepage />
+      </div>
+    </Fragment>
   );
 }
 
