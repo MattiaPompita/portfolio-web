@@ -9,11 +9,12 @@ html {
 .main {
   background-image: url("img/wickedbackground (1).svg");
   background-size: cover;
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
+  background-attachment: fixed;
 }
 
-.main::after {
+/* .main::after {
   content: "";
   background-image: url("img/ep_naturalblack.png");
   height: 300%;
@@ -21,7 +22,7 @@ html {
   opacity: 0.5;
   position: fixed;
   animation: grain 24s steps(25) infinite;
-} 
+}  */
 
 strong {
     color: #E0EF10;
