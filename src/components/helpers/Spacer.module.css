@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1920px) {
+  .xl {
+    height: 50px !important;
+  }
+
+  .md {
+    height: 30px !important;
+  }
+
+  .sm {
+    height: 10px !important;
+  }
+}

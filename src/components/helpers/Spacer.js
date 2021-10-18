@@ -1,3 +1,5 @@
+import style from "./Spacer.module.css";
+
 const Spacer = (props) => {
   let height;
   if (props.name === "sm") {
@@ -17,7 +19,7 @@ const Spacer = (props) => {
   }
 
   return (
-    <div className={props.name} style={{ height: height, width: "100%" }}></div>
+    <div className={style[props.name]} style={{ height: height, width: "100%" }}></div>
   );
 };
 

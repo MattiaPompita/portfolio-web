@@ -25,7 +25,7 @@ html {
 }  */
 
 strong {
-    color: #E0EF10;
+  color: #e0ef10;
 }
 
 /*CHI SONO SECTION*/
@@ -39,35 +39,146 @@ strong {
 
 .container {
   display: flex;
+  justify-content: space-around;
+  height: 70%;
 }
 
 .text {
   width: 60%;
   margin-left: 50px;
+  align-self: center;
+  margin-bottom: 100px;
 }
 
 .title {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 6rem;
   text-transform: uppercase;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  width: 15px;
+  height: 430px;
+  background-color: #e0ef10;
+  position: absolute;
+  top: 135px;
+  left: -50px;
 }
 
 .title span {
-  margin-left: -50px;
+  margin-left: -85px;
 }
 
 .paragraph {
-  font-size: 0.8rem;
-  line-height: 35px;
+  font-size: 1.5rem;
+  line-height: 50px;
   width: 70%;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+}
+
+.paragraph strong {
+  font-weight: 600;
+}
+
+.card {
+  padding: 0px 35px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35%;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.job {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e0ef10;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.linkedin {
+  align-self: center;
+  justify-content: flex-end;
 }
 
 
+@media only screen and (max-width: 1920px) {
+  .paragraph {
+    font-size: 1.1rem;
+    width: 85%;
+    line-height: 45px;
+  }
+  .container {
+    justify-content: space-between;
+  }
 
-.name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-align: center;
+  .title {
+    font-size: 4rem;
+  }
+
+  .title::before {
+    content: "";
+    width: 10px;
+    height: 363px;
+    background-color: #e0ef10;
+    position: absolute;
+    top: 93px;
+    left: -50px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .job {
+    text-align: center;
+    font-size: 1.0rem;
+    color: #e0ef10;
+  }
+
+  .desc {
+    font-size: 0.8rem;
+  }
+
+  svg {
+    width: 20px !important;
+  }
+
+  .linkedin {
+    width: 40px !important;
+  }
+
+  .infoContainer {
+    width: 80%;
+  }
 }
