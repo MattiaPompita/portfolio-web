@@ -4,13 +4,12 @@ html {
   font-size: 20px;
   font-family: "Montserrat", "sans-serif";
   overflow-x: hidden;
+  color: #f1fffa;
 }
 
 .main {
   background-image: url("img/wickedbackground (1).svg");
   background-size: cover;
-  height: 200vh;
-  width: 100vw;
   background-attachment: fixed;
 }
 
@@ -26,4 +25,46 @@ html {
 
 strong {
     color: #E0EF10;
+}
+
+/*CHI SONO SECTION*/
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.text {
+  width: 70%;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.title span {
+  margin-left: -50px;
+}
+
+.paragraph {
+  font-size: 0.9rem;
+  line-height: 40px;
+  width: 80%;
+  font-weight: 300;
+}
+
+
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
 }

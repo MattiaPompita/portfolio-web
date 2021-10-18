@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Spacer from "./helpers/Spacer";
 
 import style from "./Homepage.module.css";
 
@@ -44,7 +45,7 @@ const Homepage = () => {
 
   return (
     <div className={style.main}>
-      <div className={style.container}>
+      <div className={`${style.container}`}>
         <div className={style.header}>
           <motion.h1 variants={fadeIn} initial="hidden" animate="visible">
             Ciao, il mio nome è <strong> Mattia </strong>
@@ -53,7 +54,7 @@ const Homepage = () => {
             <br />
             un <strong>front-end developer</strong>
           </motion.h1>
-          <div className="spacer-sm"></div>
+          <Spacer name="md"></Spacer>
           <div className={style["scrollDown-container"]}>
             <div className={style.line}></div>
             <motion.p
@@ -76,7 +77,7 @@ const Homepage = () => {
             </motion.p>
           </div>
         </div>
-        <Thumbnail />
+        <Thumbnail height={"500px"} width={"500px"} bigThumb={true} />
       </div>
     </div>
   );

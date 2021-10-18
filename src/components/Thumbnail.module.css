@@ -68,14 +68,27 @@
 }
 
 .pic {
-  height: 500px;
-  width: 500px;
   border-radius: 50%;
   border: 5px solid #e0ef10;
+  width: 500px;
+  height: 500px;
+}
+
+.picCard {
+  border-radius: 50%;
+  border: 2.5px solid #e0ef10;
+  width: 250px;
+  height: 250px;
 }
 
 @media only screen and (max-width: 1920px) {
   .pic {
     height: 400px;
-    width: 400px;}
+    width: 400px;
+  }
+
+  .picCard {
+    height: 200px;
+    width: 200px;
+  }
 }
