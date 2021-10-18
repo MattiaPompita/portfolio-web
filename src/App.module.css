@@ -8,7 +8,8 @@ html {
 }
 
 .main {
-  background-image: url("img/wickedbackground (1).svg");
+  /* background-image: url("img/wickedbackground (1).svg"); */
+  background-color: #0a0a0a;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -41,7 +42,8 @@ strong {
 }
 
 .text {
-  width: 70%;
+  width: 60%;
+  margin-left: 50px;
 }
 
 .title {
@@ -55,10 +57,11 @@ strong {
 }
 
 .paragraph {
-  font-size: 0.9rem;
-  line-height: 40px;
-  width: 80%;
+  font-size: 0.8rem;
+  line-height: 35px;
+  width: 70%;
   font-weight: 300;
+  letter-spacing: 2px;
 }
 
 
