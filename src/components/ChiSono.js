@@ -1,13 +1,26 @@
 import style from "./ChiSono.module.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Icon from "../icon/svgIcon";
 import Spacer from "../components/helpers/Spacer";
 import Thumbnail from "../components/Thumbnail";
 
 const ChiSono = () => {
+  const line1 = "Chi";
+  const line2 = "Sono";
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  const heightRef = useRef(null);
+  const heightText = heightRef?.current?.clientHeight
+  
+  const pull_data = (data) => {
+    console.log(data);
+  }
+
   const paragraph = {
     hidden: { opacity: 1 },
     visible: {
@@ -26,16 +39,16 @@ const ChiSono = () => {
 
   const lineAnimation = {
     hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: 330, transition: { duration: 2, delay: 0.2 } },
+    visible: {
+      opacity: 1,
+      height: heightText,
+      transition: { duration: 2, delay: 0.2 },
+    },
   };
 
-  const line1 = "Chi";
-  const line2 = "Sono";
-
-  const controls = useAnimation();
-  const { ref, inView } = useInView();
-
   useEffect(() => {
+    console.log(heightRef);
+
     if (inView) {
       controls.start("visible");
     }
@@ -90,8 +103,8 @@ const ChiSono = () => {
             ></motion.div>
           </motion.h2>
 
-          <Spacer name="sm"></Spacer>
-          <p className={style.paragraph}>
+          <Spacer name="sm" func={pull_data}></Spacer>
+          <p className={style.paragraph} ref={heightRef}>
             Vivo in Emilia-Romagna, ho 23 anni e ho studiato per diventare
             <strong> front-end developer</strong>.<br />A livello accademico ho
             studiato programmazione già dalle superiori, ho esplorato il mondo

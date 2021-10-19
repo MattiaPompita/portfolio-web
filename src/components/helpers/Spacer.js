@@ -18,6 +18,8 @@ const Spacer = (props) => {
     height = "80px";
   }
 
+  props.func('My Name is Mattia');
+
   return (
     <div className={style[props.name]} style={{ height: height, width: "100%" }}></div>
   );
