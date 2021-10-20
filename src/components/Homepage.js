@@ -3,7 +3,6 @@ import Spacer from "./helpers/Spacer";
 
 import style from "./Homepage.module.css";
 
-import Thumbnail from "./Thumbnail";
 
 const Homepage = () => {
   const paragraph = {

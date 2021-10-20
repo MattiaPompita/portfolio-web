@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useRef } from "react";
 
 import Spacer from "../components/helpers/Spacer";
-import Card from "./Card";
 
 const ChiSono = () => { 
 
