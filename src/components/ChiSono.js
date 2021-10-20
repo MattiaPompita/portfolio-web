@@ -6,8 +6,11 @@ import { useEffect, useRef } from "react";
 import Icon from "../icon/svgIcon";
 import Spacer from "../components/helpers/Spacer";
 import Thumbnail from "../components/Thumbnail";
+import Card from "./Card";
 
-const ChiSono = () => {
+const ChiSono = () => { 
+
+   /* ------ VARIABLES ------- */
   const line1 = "Chi";
   const line2 = "Sono";
 
@@ -17,10 +20,12 @@ const ChiSono = () => {
   const heightRef = useRef(null);
   const heightText = heightRef?.current?.clientHeight;
 
-  const pull_data = (data) => {
-    console.log(data);
+  /* ------ FUNCTION ------- */
+  const funcMsg = (msg) => {
+    console.log(msg);
   };
 
+  /* ------ ANIMATION ------ */
   const paragraph = {
     hidden: { opacity: 1 },
     visible: {
@@ -65,6 +70,7 @@ const ChiSono = () => {
     },
   };
 
+  /* ------ USE EFFECT ------ */
   useEffect(() => {
     console.log(heightRef);
 
@@ -80,8 +86,6 @@ const ChiSono = () => {
     <section className={style.section}>
       <div className={`${style.container} container`}>
         <div className={style.text}>
-          {/* <h2 className={style.title}> */}
-          {/* <span className={style.chi}>Chi</span> <br /> Sono */}
           <motion.h2
             ref={ref}
             variants={paragraph}
@@ -122,7 +126,8 @@ const ChiSono = () => {
             ></motion.div>
           </motion.h2>
 
-          <Spacer name="md" func={(data) => pull_data(data)}></Spacer>
+          {/* ----- CHILD ----- */}
+          <Spacer name="md" func={funcMsg}></Spacer>
           <motion.p
             variants={fadeIn}
             initial="hidden"
@@ -138,28 +143,7 @@ const ChiSono = () => {
             <strong> applicazioni web</strong>.
           </motion.p>
         </div>
-        <div className={style.card}>
-          <Thumbnail bigThumb={false} />
-          <div className={style.descContainer}>
-            <h3 className={style.name}>Mattia Pompita</h3>
-            <Spacer name={"sm"}></Spacer>
-            <h4 className={style.job}>front-end developer</h4>
-            <Spacer name={"md"}></Spacer>
-            <div className={style.infoContainer}>
-              <div className={style.info}>
-                {Icon.cake}
-                <p className={style.desc}>11 Febbraio 1998</p>
-              </div>
-              <Spacer name={"sm"}></Spacer>
-              <div className={style.info}>
-                {Icon.pin}
-                <p className={style.desc}>Modena, (MO)</p>
-              </div>
-            </div>
-          </div>
-          <Spacer name={"md"}></Spacer>
-          <div className={style.svgContainer}>{Icon.linkedinSvg}</div>
-        </div>
+        <Card />
       </div>
     </section>
   );

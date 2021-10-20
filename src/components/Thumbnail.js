@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import style from "./Thumbnail.module.css";
 
@@ -7,14 +7,13 @@ import circleAvatar from "../img/avatar.png";
 import { motion } from "framer-motion";
 
 const Thumbnail = (props) => {
+
+   /* ------ VARIABLES ------ */
+
   const [isFlip, setFlip] = useState(true);
-
-  const rotatePic = () => {
-    setFlip((prevState) => !prevState);
-  };
-
   let fadeIn = {};
 
+   /* ------ ANIMATION ------ */
   if (props.bigThumb) {
     fadeIn = {
       hidden: { y: 40 },
@@ -32,6 +31,18 @@ const Thumbnail = (props) => {
       },
     };
   }
+
+   /* ------ FUNCTION ------ */
+
+  const rotatePic = () => {
+    setFlip((prevState) => !prevState);
+  };
+
+   /* ------ USE EFFECT ------ */
+
+  useEffect(() => {
+    props.func("My name is Mattia")
+  });
 
   return (
     <motion.div
