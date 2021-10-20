@@ -1,22 +1,32 @@
 import style from "./ChiSono.module.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Spacer from "../components/helpers/Spacer";
 
-const ChiSono = () => { 
-
-   /* ------ VARIABLES ------- */
+const ChiSono = () => {
+  /* ------ VARIABLES ------- */
   const line1 = "Chi";
   const line2 = "Sono";
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
+  
+  const [heightWSize, setHeightWSize] = useState();
+  let heightBig = false;
+  
+  useEffect(() => {
+    setHeightWSize(window.innerHeight);
+    console.log(heightWSize);
+  }, [heightWSize]);
+
+   if(heightWSize >= 1297){
+      heightBig = true;
+   }
 
   const heightRef = useRef(null);
   const heightText = heightRef?.current?.clientHeight;
-
   /* ------ FUNCTION ------- */
   const funcMsg = (msg) => {
     console.log(msg);
@@ -43,13 +53,13 @@ const ChiSono = () => {
     hidden: { opacity: 0, height: 0 },
     visible: {
       opacity: 1,
-      height: heightText + 110,
+      height: heightText + (heightBig ? 130 : 110),
       transition: { duration: 1.8, delay: 0.2 },
     },
   };
 
   const fadeIn = {
-    hidden: { y: 100, opacity:0 },
+    hidden: { y: 100, opacity: 0 },
     visible: {
       y: 0,
       opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],

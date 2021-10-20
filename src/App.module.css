@@ -7,7 +7,11 @@ html {
   color: #f1fffa;
 }
 
-
+.main {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
 
 /* .main::after {
   content: "";
@@ -23,25 +27,57 @@ strong {
   color: #e0ef10;
 }
 
-
+.clear {
+  clear: both;
+}
 
 .skill {
   display: flex;
   align-items: center;
-  
+
   width: 100vw;
   height: 100vh;
 }
 
-h3 {
+.title {
   font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
 }
 
+.title::before {
+  content: "&";
+  color: #0a0a0a;
+  font-size: 14rem;
+  font-weight: 700;
+  top: -1rem;
+  right: -7rem;
+  position: absolute;
+  z-index: -1;
+  text-shadow: 2px 0 0 #e0ef10, -2px 0 0 #e0ef10, 0 2px 0 #e0ef10,
+    0 -2px 0 #e0ef10, 1px 1px #e0ef10, -1px -1px 0 #e0ef10, 1px -1px 0 #e0ef10,
+    -1px 1px 0 #e0ef10;
+}
 
+.toggleSwitch {
+  background-color: #332F2E;
+  display: flex;
+  width: 20%;
+  height: 50px;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.toggleSwitch h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
 
 @media only screen and (max-width: 1920px) {
   html {
     font-size: 15px;
   }
 }
-

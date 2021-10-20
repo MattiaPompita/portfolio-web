@@ -61,7 +61,6 @@ const Card = () => {
           </div>
         </div>
       </div>
-      <Spacer name={"md"}></Spacer>
       <div className={style.svgContainer}>{Icon.linkedinSvg}</div>
     </motion.div>
   );

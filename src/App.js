@@ -2,12 +2,12 @@ import { Fragment } from "react";
 import style from "./App.module.css";
 import Card from "./components/Card";
 import ChiSono from "./components/ChiSono";
+import Spacer from "./components/helpers/Spacer";
 
 import Homepage from "./components/Homepage";
 import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 
 function App() {
-  
   return (
     <Fragment>
       <div className={style.main}>
@@ -22,9 +22,10 @@ function App() {
                 <h3 className={style.title}>
                   Skills <br /> Tools
                 </h3>
+                <Spacer name={"xl"}></Spacer>
                 <div className={style.toggleSwitch}>
-                  <h3>Code</h3>
-                  <h3>Design</h3>
+                  <h4>Code</h4>
+                  <h4>Design</h4>
                 </div>
               </div>
               <div className={style.cardContainer}></div>

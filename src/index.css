@@ -47,3 +47,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+#root {
+	height: 100%;
+}
