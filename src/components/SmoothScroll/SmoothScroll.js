@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import style from './SmoothScroll.module.css';
 
 import useWindowSize from "../../hook/useWindowSize";
+import { useCallback } from "react/cjs/react.development";
 
 const SmoothScroll = ({ children }) => {
   // 1.
@@ -29,12 +30,7 @@ const SmoothScroll = ({ children }) => {
     }px`;
   };
 
-  // 5.
-  useEffect(() => {
-    requestAnimationFrame(() => smoothScrollingHandler());
-  }, []);
-
-  const smoothScrollingHandler = () => {
+  const smoothScrollingHandler = useCallback(() => {
     data.current = window.scrollY;
     data.previous += (data.current - data.previous) * data.ease;
     data.rounded = Math.round(data.previous * 100) / 100;
@@ -43,7 +39,13 @@ const SmoothScroll = ({ children }) => {
 
     // Recursive call
     requestAnimationFrame(() => smoothScrollingHandler());
-  };
+  },[]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 5.
+  useEffect(() => {
+    requestAnimationFrame(() => smoothScrollingHandler());
+  }, [smoothScrollingHandler]);
+
 
   return (
     <div className={style.parent}>

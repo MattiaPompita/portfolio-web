@@ -1,11 +1,48 @@
+import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 import style from "./Card.module.css";
 import Spacer from "./helpers/Spacer";
 import Thumbnail from "./Thumbnail";
 import Icon from "../icon/svgIcon";
 
 const Card = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  const fadeIn = {
+    hidden: { x: 150, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],
+      scale: [0.7, 1],
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+        opacity: {
+          delay: 0.5,
+          times: [0, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        },
+        scale: {
+          times: [0, 1],
+        },
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
-    <div className={style.card}>
+    <motion.div variants={fadeIn} initial="hidden" animate={controls} ref={ref} className={style.card}>
       <Thumbnail bigThumb={false} />
       <div className={style.descContainer}>
         <h3 className={style.name}>Mattia Pompita</h3>
@@ -26,7 +63,7 @@ const Card = () => {
       </div>
       <Spacer name={"md"}></Spacer>
       <div className={style.svgContainer}>{Icon.linkedinSvg}</div>
-    </div>
+    </motion.div>
   );
 };
 

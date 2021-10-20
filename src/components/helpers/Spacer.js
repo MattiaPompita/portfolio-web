@@ -1,5 +1,4 @@
 import style from "./Spacer.module.css";
-import { useEffect } from "react";
 
 const Spacer = (props) => {
   let height;
@@ -21,9 +20,7 @@ const Spacer = (props) => {
 
      /* ------ USE EFFECT ------ */
 
-     useEffect(() => {
-      props.func("My name is Mattia")
-    });
+    //  \
 
   return (
     <div className={style[props.name]} style={{ height: height, width: "100%" }}></div>

@@ -3,9 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef } from "react";
 
-import Icon from "../icon/svgIcon";
 import Spacer from "../components/helpers/Spacer";
-import Thumbnail from "../components/Thumbnail";
 import Card from "./Card";
 
 const ChiSono = () => { 
@@ -52,7 +50,7 @@ const ChiSono = () => {
   };
 
   const fadeIn = {
-    hidden: { y: 100 },
+    hidden: { y: 100, opacity:0 },
     visible: {
       y: 0,
       opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],
