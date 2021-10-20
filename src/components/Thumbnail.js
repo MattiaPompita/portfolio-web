@@ -38,11 +38,7 @@ const Thumbnail = (props) => {
     setFlip((prevState) => !prevState);
   };
 
-   /* ------ USE EFFECT ------ */
 
-  useEffect(() => {
-    props.func("My name is Mattia")
-  });
 
   return (
     <motion.div
