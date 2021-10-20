@@ -85,12 +85,12 @@
 
 @media only screen and (max-width: 1920px) {
   .pic {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
   }
 
   .picCard {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
 }

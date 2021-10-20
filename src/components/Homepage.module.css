@@ -28,7 +28,7 @@
   font-size: 3rem;
   font-weight: 700;
   color: #f1fffa;
-  line-height: 75px;
+  line-height: 4rem;
 }
 
 .scrollDown-container {
@@ -145,7 +145,7 @@
 
   .header h1 {
     font-size: 2.5rem;
-    line-height: 60px;
+    line-height: 3rem;
   }
 
   .scrollDown-container p {

@@ -15,11 +15,11 @@ const ChiSono = () => {
   const { ref, inView } = useInView();
 
   const heightRef = useRef(null);
-  const heightText = heightRef?.current?.clientHeight
-  
+  const heightText = heightRef?.current?.clientHeight;
+
   const pull_data = (data) => {
     console.log(data);
-  }
+  };
 
   const paragraph = {
     hidden: { opacity: 1 },
@@ -41,8 +41,27 @@ const ChiSono = () => {
     hidden: { opacity: 0, height: 0 },
     visible: {
       opacity: 1,
-      height: heightText,
-      transition: { duration: 2, delay: 0.2 },
+      height: heightText + 70,
+      transition: { duration: 1.8, delay: 0.2 },
+    },
+  };
+
+  const fadeIn = {
+    hidden: { y: 100 },
+    visible: {
+      y: 0,
+      opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],
+      scale: [0.7, 1],
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+        opacity: {
+          times: [0, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        },
+        scale: {
+          times: [0, 1],
+        },
+      },
     },
   };
 
@@ -103,15 +122,21 @@ const ChiSono = () => {
             ></motion.div>
           </motion.h2>
 
-          <Spacer name="sm" func={pull_data}></Spacer>
-          <p className={style.paragraph} ref={heightRef}>
+          <Spacer name="md" func={(data) => pull_data(data)}></Spacer>
+          <motion.p
+            variants={fadeIn}
+            initial="hidden"
+            animate={controls}
+            className={style.paragraph}
+            ref={heightRef}
+          >
             Vivo in Emilia-Romagna, ho 23 anni e ho studiato per diventare
             <strong> front-end developer</strong>.<br />A livello accademico ho
             studiato programmazione già dalle superiori, ho esplorato il mondo
             del
             <strong> graphic design</strong> e ho deciso di specializzarmi in{" "}
             <strong> applicazioni web</strong>.
-          </p>
+          </motion.p>
         </div>
         <div className={style.card}>
           <Thumbnail bigThumb={false} />

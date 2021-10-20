@@ -7,12 +7,6 @@ html {
   color: #f1fffa;
 }
 
-.main {
-  /* background-image: url("img/wickedbackground (1).svg"); */
-  background-color: #0a0a0a;
-  background-size: cover;
-  background-attachment: fixed;
-}
 
 /* .main::after {
   content: "";
@@ -26,5 +20,11 @@ html {
 
 strong {
   color: #e0ef10;
+}
+
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
 }
 
