@@ -5,6 +5,10 @@
   flex-direction: column;
   align-items: center;
   opacity: 0;
+  position: fixed;
+  z-index: 9999;
+  right: 150px;
+  top: 100px;
 }
 
 .descContainer {
@@ -48,22 +52,7 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 1920px) {
-
-    .name {
-      font-size: 1.5rem;
-    }
-  
-    .job {
-      text-align: center;
-      font-size: 1rem;
-      color: #e0ef10;
-    }
-  
-    .desc {
-      font-size: 0.8rem;
-    }
-  
+@media only screen and (max-width: 1920px) {  
     svg {
       width: 20px !important;
     }

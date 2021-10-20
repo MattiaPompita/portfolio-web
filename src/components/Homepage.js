@@ -45,7 +45,7 @@ const Homepage = () => {
 
   return (
     <div className={style.main}>
-      <div className={`${style.container}`}>
+      <div className={`${style.container} container`}>
         <div className={style.header}>
           <motion.h1 variants={fadeIn} initial="hidden" animate="visible">
             Ciao, il mio nome è <strong> Mattia </strong>
@@ -77,7 +77,7 @@ const Homepage = () => {
             </motion.p>
           </div>
         </div>
-        <Thumbnail height={"500px"} width={"500px"} bigThumb={true} />
+        {/* <Thumbnail height={"500px"} width={"500px"} bigThumb={true} /> */}
       </div>
     </div>
   );

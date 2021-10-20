@@ -8,6 +8,7 @@ html {
 }
 
 
+
 /* .main::after {
   content: "";
   background-image: url("img/ep_naturalblack.png");
@@ -32,16 +33,15 @@ strong {
   height: 100vh;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
+h3 {
+  font-size: 6rem;
 }
 
 
 
 @media only screen and (max-width: 1920px) {
   html {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 

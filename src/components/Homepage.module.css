@@ -16,13 +16,6 @@
   animation: grain 24s steps(25) infinite;
 }  */
 
-.container {
-  width: 1920px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  z-index: 1;
-}
 
 .header h1 {
   font-size: 3rem;
@@ -138,17 +131,3 @@
   }
 }
 
-@media only screen and (max-width: 1920px) {
-  .container {
-    width: 1680px;
-  }
-
-  .header h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-
-  .scrollDown-container p {
-    font-size: 0.8rem;
-  }
-}

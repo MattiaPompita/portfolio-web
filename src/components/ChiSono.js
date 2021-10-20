@@ -44,7 +44,7 @@ const ChiSono = () => {
     hidden: { opacity: 0, height: 0 },
     visible: {
       opacity: 1,
-      height: heightText + 70,
+      height: heightText + 110,
       transition: { duration: 1.8, delay: 0.2 },
     },
   };
@@ -141,7 +141,6 @@ const ChiSono = () => {
             <strong> applicazioni web</strong>.
           </motion.p>
         </div>
-        <Card />
       </div>
     </section>
   );

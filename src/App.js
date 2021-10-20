@@ -7,11 +7,14 @@ import Homepage from "./components/Homepage";
 import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 
 function App() {
+  
   return (
     <Fragment>
       <div className={style.main}>
+        <Card />
         <SmoothScroll>
           <Homepage />
+          <div className={style.prova}></div>
           <ChiSono />
           <section className={style.skill}>
             <div className={`${style.container} container`}>
@@ -25,7 +28,6 @@ function App() {
                 </div>
               </div>
               <div className={style.cardContainer}></div>
-              <Card />
             </div>
           </section>
         </SmoothScroll>

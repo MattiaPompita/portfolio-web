@@ -27,8 +27,7 @@
 }
 
 .line {
-  width: 15px;
-  height: 0px;
+  width: 1rem;
   background-color: #e0ef10;
   position: absolute;
   top: 135px;
@@ -38,8 +37,8 @@
 
 .paragraph {
   font-size: 1.5rem;
-  line-height: 2.5rem;
-  width: 70%;
+  line-height: 2rem;
+  width: 40%;
   font-weight: 300;
   letter-spacing: 3px;
 }
@@ -49,42 +48,16 @@
 }
 
 
-
 @media only screen and (max-width: 1920px) {
-
-  .paragraph {
-    font-size: 1rem;
-    width: 60%;
-    line-height: 2rem;
-  }
-
-  .title {
-    font-size: 4rem;
-  }
 
   .line {
     content: "";
-    width: 15px;
-    height: 0px;
     background-color: #e0ef10;
     position: absolute;
     top: 93px;
-    left: -50px;
+    left: -45px;
   }
 
-  .name {
-    font-size: 1.5rem;
-  }
-
-  .job {
-    text-align: center;
-    font-size: 1rem;
-    color: #e0ef10;
-  }
-
-  .desc {
-    font-size: 0.8rem;
-  }
 
   svg {
     width: 20px !important;
