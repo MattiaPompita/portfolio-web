@@ -53,26 +53,19 @@ const ChiSono = () => {
     hidden: { opacity: 0, height: 0 },
     visible: {
       opacity: 1,
-      height: heightText + (heightBig ? 130 : 110),
+      height: heightText + (heightBig ? 130 : 90),
       transition: { duration: 1.8, delay: 0.2 },
     },
   };
 
   const fadeIn = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { y: 100, opacity: 1 },
     visible: {
       y: 0,
-      opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],
-      scale: [0.7, 1],
+      opacity: 1,
       transition: {
-        duration: 2,
+        duration: 1.5,
         ease: "easeInOut",
-        opacity: {
-          times: [0, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-        },
-        scale: {
-          times: [0, 1],
-        },
       },
     },
   };
@@ -84,9 +77,7 @@ const ChiSono = () => {
     if (inView) {
       controls.start("visible");
     }
-    if (!inView) {
-      controls.start("hidden");
-    }
+
   }, [controls, inView]);
 
   return (
