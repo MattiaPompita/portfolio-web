@@ -1,0 +1,71 @@
+.skill {
+  display: flex;
+  align-items: center;
+
+  width: 100vw;
+  height: 150vh;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.title::before {
+  content: "&";
+  color: #0a0a0a;
+  font-size: 14rem;
+  font-weight: 700;
+  top: -1rem;
+  right: -7rem;
+  position: absolute;
+  z-index: -1;
+  text-shadow: 2px 0 0 #e0ef10, -2px 0 0 #e0ef10, 0 2px 0 #e0ef10,
+    0 -2px 0 #e0ef10, 1px 1px #e0ef10, -1px -1px 0 #e0ef10, 1px -1px 0 #e0ef10,
+    -1px 1px 0 #e0ef10;
+}
+
+.switch {
+  width: 15%;
+  height: 40px;
+  background-color: #332f2e;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 45%;
+  height: 30px;
+  background-color: #2486d0;
+  border-radius: 20px;
+}
+
+.code {
+  position: absolute;
+  top: 23px;
+  left: 30px;
+  margin-top: -10px;
+}
+
+.design {
+  position: absolute;
+  top: 23px;
+  right: 21px;
+  margin-top: -10px;
+}
+
+.switch h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
