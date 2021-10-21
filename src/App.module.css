@@ -61,6 +61,44 @@ strong {
     -1px 1px 0 #e0ef10;
 }
 
+.switch {
+  width: 20%;
+  height: 50px;
+  background-color: #332f2e;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 50%;
+  height: 40px;
+  background-color: #2486D0;
+  border-radius: 20px;
+}
+
+.code {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  margin-top: -10px;
+}
+
+.design {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  margin-top: -10px;
+}
+
+/* 
 .toggleSwitch {
   background-color: #332F2E;
   display: flex;
@@ -69,9 +107,9 @@ strong {
   border-radius: 25px;
   align-items: center;
   justify-content: space-around;
-}
+} */
 
-.toggleSwitch h4 {
+.switch h4 {
   font-size: 1.3rem;
   font-weight: 600;
 }

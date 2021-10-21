@@ -51,7 +51,7 @@ const Homepage = () => {
             <br />
             e questo sono io,
             <br />
-            un <strong>front-end developer</strong>
+            un <strong>front-end developer</strong>.
           </motion.h1>
           <Spacer name="md"></Spacer>
           <div className={style["scrollDown-container"]}>
