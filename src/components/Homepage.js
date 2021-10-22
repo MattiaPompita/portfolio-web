@@ -20,14 +20,31 @@ const Homepage = () => {
     visible: { opacity: 1 },
   };
 
-  const fadeIn = {
-    hidden: { opacity: 0 },
+
+  const parent = {
+    hidden: {
+      opacity: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+    },
     visible: {
       opacity: 1,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut",
+        staggerChildren: 2,
+        ease: [0.455, 0.03, 0.515, 0.955],
       },
+    },
+  };
+
+  const fadeIn = {
+    hidden: {
+      opacity: 0,
+      y: "195%",
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 },
     },
   };
 
@@ -36,8 +53,8 @@ const Homepage = () => {
   return (
     <div className={style.main}>
       <div className={`${style.container} container`}>
-        <div className={style.header}>
-          <motion.h1 variants={fadeIn} initial="hidden" animate="visible">
+        <motion.div className={style.header} variants={parent} initial="hidden" animate="visible">
+          <motion.h1 variants={fadeIn} >
             Ciao, il mio nome è <strong> Mattia </strong>
             <br />
             e questo sono io,
@@ -66,7 +83,7 @@ const Homepage = () => {
               })}
             </motion.p>
           </div>
-        </div>
+        </motion.div>
         {/* <Thumbnail height={"500px"} width={"500px"} bigThumb={true} /> */}
       </div>
     </div>

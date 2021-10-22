@@ -15,7 +15,9 @@
   position: fixed;
   animation: grain 24s steps(25) infinite;
 }  */
-
+ .header {
+   overflow: hidden;
+ }
 
 .header h1 {
   font-size: 3rem;

@@ -6,12 +6,18 @@
   height: 150vh;
 }
 
+.text {
+  overflow: hidden;
+  height: 17rem;
+}
+
 .title {
   font-size: 5.5rem;
   font-weight: 900;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
+  z-index: 1;
 }
 
 .title::before {

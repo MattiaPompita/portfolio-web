@@ -33,21 +33,6 @@ const ChiSono = () => {
   };
 
   /* ------ ANIMATION ------ */
-  const paragraph = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const letter = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1 },
-  };
 
   const lineAnimation = {
     hidden: { opacity: 0, height: 0 },
@@ -58,14 +43,30 @@ const ChiSono = () => {
     },
   };
 
-  const fadeIn = {
-    hidden: { opacity: 0 },
+  const parent = {
+    hidden: {
+      opacity: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+    },
     visible: {
       opacity: 1,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut",
+        staggerChildren: 0.5,
+        ease: [0.455, 0.03, 0.515, 0.955],
       },
+    },
+  };
+
+  const child = {
+    hidden: {
+      opacity: 0,
+      y: "195%",
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
     },
   };
 
@@ -76,46 +77,21 @@ const ChiSono = () => {
     if (inView) {
       controls.start("visible");
     }
-    if (!inView) {
-      controls.start("hidden");
-    }
   }, [controls, inView]);
 
   return (
     <section className={style.section}>
       <div className={`${style.container} container`}>
-        <div className={style.text}>
-          <motion.h2
-            ref={ref}
-            variants={paragraph}
-            initial="hidden"
-            animate={controls}
-            className={style.title}
-          >
-            <div className={style.line1}>
-              {line1.split("").map((char, index) => {
-                return (
-                  <motion.span
-                    className={char + "-" + index}
-                    key={char + "-" + index}
-                    variants={letter}
-                  >
-                    {char}
-                  </motion.span>
-                );
-              })}{" "}
-            </div>
-            {line2.split("").map((char, index) => {
-              return (
-                <motion.span
-                  className={char + "-" + index}
-                  key={char + "-" + index}
-                  variants={letter}
-                >
-                  {char}
-                </motion.span>
-              );
-            })}
+        <motion.div
+          className={style.text}
+          variants={parent}
+          initial="hidden"
+          animate={controls}
+        >
+          <motion.h2 variants={child} className={style.title}>
+            <span>Chi</span><br/>
+
+            <span className={style.line1}>Sono </span>
             <motion.div
               variants={lineAnimation}
               ref={ref}
@@ -126,11 +102,11 @@ const ChiSono = () => {
           </motion.h2>
 
           {/* ----- CHILD ----- */}
-          <Spacer name="md" func={funcMsg}></Spacer>
+          <Spacer name="md" ref={ref} func={funcMsg}></Spacer>
           <motion.p
-            variants={fadeIn}
-            initial="hidden"
-            animate={controls}
+            variants={child}
+            // initial="hidden"
+            // animate={controls}
             className={style.paragraph}
             ref={heightRef}
           >
@@ -141,7 +117,7 @@ const ChiSono = () => {
             <strong> graphic design</strong> e ho deciso di specializzarmi in{" "}
             <strong> applicazioni web</strong>.
           </motion.p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
