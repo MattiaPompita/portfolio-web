@@ -22,7 +22,7 @@ const Homepage = () => {
   };
 
   const fadeIn = {
-    hidden: { y: 50 },
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],
