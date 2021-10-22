@@ -12,18 +12,18 @@ const ChiSono = () => {
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
-  
+
   const [heightWSize, setHeightWSize] = useState();
   let heightBig = false;
-  
+
   useEffect(() => {
     setHeightWSize(window.innerHeight);
     console.log(heightWSize);
   }, [heightWSize]);
 
-   if(heightWSize >= 1297){
-      heightBig = true;
-   }
+  if (heightWSize >= 1297) {
+    heightBig = true;
+  }
 
   const heightRef = useRef(null);
   const heightText = heightRef?.current?.clientHeight;
@@ -59,9 +59,8 @@ const ChiSono = () => {
   };
 
   const fadeIn = {
-    hidden: { y: 100, opacity: 1 },
+    hidden: { opacity: 0 },
     visible: {
-      y: 0,
       opacity: 1,
       transition: {
         duration: 1.5,
@@ -77,7 +76,9 @@ const ChiSono = () => {
     if (inView) {
       controls.start("visible");
     }
-
+    if (!inView) {
+      controls.start("hidden");
+    }
   }, [controls, inView]);
 
   return (

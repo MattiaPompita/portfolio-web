@@ -3,7 +3,6 @@ import Spacer from "./helpers/Spacer";
 
 import style from "./Homepage.module.css";
 
-
 const Homepage = () => {
   const paragraph = {
     hidden: { opacity: 1 },
@@ -22,20 +21,12 @@ const Homepage = () => {
   };
 
   const fadeIn = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { opacity: 0 },
     visible: {
-      y: 0,
-      opacity: [0, 0, 0.1, 0.3, 0.5, 0.8, 1],
-      scale: [0.7, 1],
+      opacity: 1,
       transition: {
         duration: 1.5,
         ease: "easeInOut",
-        opacity: {
-          times: [0, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-        },
-        scale: {
-          times: [0, 1]
-        }
       },
     },
   };
