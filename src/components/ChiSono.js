@@ -6,9 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import Spacer from "../components/helpers/Spacer";
 
 const ChiSono = () => {
-  /* ------ VARIABLES ------- */
-  const line1 = "Chi";
-  const line2 = "Sono";
 
   const controls = useAnimation();
   const { ref, inView } = useInView();

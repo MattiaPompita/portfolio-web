@@ -19,7 +19,7 @@ const SkillCard = (props) => {
   return (
     <motion.li variants={child} className={style.skillCard}>
       <div className={style.container}>
-        <img className={style.icon} src={props.img}></img>
+        <img className={style.icon} src={props.img} alt=""></img>
         <h3 className={style.text}>{props.name}</h3>
       </div>
     </motion.li>
