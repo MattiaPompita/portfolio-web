@@ -1,7 +1,7 @@
 .skillCard {
     background-color: #332f2e;
-    width: 23%;
-    height: 45%;
+    width: 22%;
+    height: 37%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
 }
 
 .icon{
-    width: 7rem;
+    width: 5rem;
 }
 
 .container {
@@ -23,6 +23,6 @@
 }
 
 .text {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
