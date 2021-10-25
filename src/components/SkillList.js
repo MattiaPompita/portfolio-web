@@ -2,9 +2,38 @@ import useImage from "../hook/useImage";
 import SkillCard from "./SkillCard";
 import style from "./SkillList.module.css";
 
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+
 
 
 const SkillList = () => {
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    
+  }, [controls, inView]);
+
+  const parent = {
+    hidden: {
+      opacity: 0
+    },
+
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 1,
+        duration: 1,
+        staggerChildren: 0.4,
+      }
+    }
+  }
 
   const images = useImage();
 
@@ -20,11 +49,11 @@ const SkillList = () => {
   ];
 
   return (
-    <ul className={style.skillContainer}>
+    <motion.ul ref={ref} initial="hidden" animate={controls} variants={parent} className={style.skillContainer}>
       {skillsCode.map((skill) => (
         <SkillCard id={skill.id} name={skill.name} img={skill.img}></SkillCard>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
