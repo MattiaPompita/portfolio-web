@@ -12,11 +12,11 @@ function App() {
     <Fragment>
       <div className={style.main}>
         <Card />
-        <SmoothScroll>
+        {/* <SmoothScroll> */}
           <Homepage />
           <ChiSono />
           <Skill />
-        </SmoothScroll>
+        {/* </SmoothScroll> */}
       </div>
     </Fragment>
   );
