@@ -75,3 +75,19 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 1920px) {
+  .code {
+    position: absolute;
+    top: 22px;
+    left: 25px;
+    margin-top: -0.65rem;
+  }
+  
+  .design {
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    margin-top: -0.65rem;
+  }
+}
