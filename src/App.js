@@ -14,7 +14,6 @@ function App() {
         <Card />
         <SmoothScroll>
           <Homepage />
-          <div className={style.prova}></div>
           <ChiSono />
           <Skill />
         </SmoothScroll>

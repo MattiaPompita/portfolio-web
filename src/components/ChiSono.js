@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import Spacer from "../components/helpers/Spacer";
 
 const ChiSono = () => {
-
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -78,7 +77,10 @@ const ChiSono = () => {
 
   return (
     <section className={style.section}>
-      <div className={`${style.container} container`}>
+      <motion.div
+        whileHover={{  }}
+        className={`${style.container} container`}
+      >
         <motion.div
           className={style.text}
           variants={parent}
@@ -86,7 +88,8 @@ const ChiSono = () => {
           animate={controls}
         >
           <motion.h2 variants={child} className={style.title}>
-            <span>Chi</span><br/>
+            <span>Chi</span>
+            <br />
 
             <span className={style.line1}>Sono </span>
             <motion.div
@@ -115,7 +118,7 @@ const ChiSono = () => {
             <strong> applicazioni web</strong>.
           </motion.p>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
