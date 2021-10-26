@@ -1,18 +1,17 @@
 .card {
   padding: 0px 35px;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 9999;
-  right: 12%;
-  top: 50%;
-  height: 800px;
+  top: 12%;
   justify-content: space-between;
-  margin-top: -400px;
-}
+  float: right;
+  right: 5%;
+  height: 35rem;}
 
 .descContainer {
   display: flex;
@@ -67,17 +66,7 @@
   .infoContainer {
     width: 80%;
   }
-
-  .card {
-    top: 50%;
-    height: 550px;
-    justify-content: space-between;
-    margin-top: -275px;
-  }
 }
 
 @media only screen and (max-width: 1536px) {
-  .card {
-    right: 3%;
-  }
 }

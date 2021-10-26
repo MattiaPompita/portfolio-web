@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Spacer from "./helpers/Spacer";
+import Thumbnail from "./Thumbnail";
 
 import style from "./Homepage.module.css";
 
@@ -84,7 +85,7 @@ const Homepage = () => {
             </motion.p>
           </div>
         </motion.div>
-        {/* <Thumbnail height={"500px"} width={"500px"} bigThumb={true} /> */}
+        <Thumbnail height={"500px"} width={"500px"} bigThumb={true} />
       </div>
     </div>
   );

@@ -11,11 +11,16 @@ function App() {
   return (
     <Fragment>
       <div className={style.main}>
-        <Card />
         {/* <SmoothScroll> */}
-          <Homepage />
+        <Homepage />
+        <div
+          className={style.stickyContainer}
+          style={{ width: "100vw", height: "100%" }}
+        >
+          <Card /><div class="clear"></div>
           <ChiSono />
           <Skill />
+        </div>
         {/* </SmoothScroll> */}
       </div>
     </Fragment>
