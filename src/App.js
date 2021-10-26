@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import style from "./App.module.css";
 import Card from "./components/Card";
 import ChiSono from "./components/ChiSono";
+import Contatti from "./components/Contatti";
 
 import Homepage from "./components/Homepage";
 import Skill from "./components/Skill";
@@ -20,6 +21,8 @@ function App() {
           <Card /><div class="clear"></div>
           <ChiSono />
           <Skill />
+          <Contatti />
+          
         </div>
         {/* </SmoothScroll> */}
       </div>
