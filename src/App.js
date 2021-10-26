@@ -5,18 +5,18 @@ import ChiSono from "./components/ChiSono";
 
 import Homepage from "./components/Homepage";
 import Skill from "./components/Skill";
-import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
+// import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 
 function App() {
   return (
     <Fragment>
       <div className={style.main}>
         <Card />
-        <SmoothScroll>
+        {/* <SmoothScroll> */}
           <Homepage />
           <ChiSono />
           <Skill />
-        </SmoothScroll>
+        {/* </SmoothScroll> */}
       </div>
     </Fragment>
   );
