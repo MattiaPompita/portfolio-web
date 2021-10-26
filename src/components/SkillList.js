@@ -51,7 +51,7 @@ const SkillList = () => {
   return (
     <motion.ul ref={ref} initial="hidden" animate={controls} variants={parent} className={style.skillContainer}>
       {skillsCode.map((skill) => (
-        <SkillCard id={skill.id} name={skill.name} img={skill.img}></SkillCard>
+        <SkillCard key={skill.id} id={skill.id} name={skill.name} img={skill.img}></SkillCard>
       ))}
     </motion.ul>
   );

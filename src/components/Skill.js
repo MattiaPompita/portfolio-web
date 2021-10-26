@@ -73,7 +73,7 @@ const Skill = () => {
           <motion.div
             variants={child}
             className={style.switch}
-            data-isOn={isOn}
+            data-ison={isOn}
             onClick={toggleSwitch}
           >
             <motion.div

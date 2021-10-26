@@ -23,10 +23,6 @@ const ChiSono = () => {
 
   const heightRef = useRef(null);
   const heightText = heightRef?.current?.clientHeight;
-  /* ------ FUNCTION ------- */
-  const funcMsg = (msg) => {
-    console.log(msg);
-  };
 
   /* ------ ANIMATION ------ */
 
@@ -78,7 +74,6 @@ const ChiSono = () => {
   return (
     <section className={style.section}>
       <motion.div
-        whileHover={{  }}
         className={`${style.container} container`}
       >
         <motion.div
@@ -102,7 +97,7 @@ const ChiSono = () => {
           </motion.h2>
 
           {/* ----- CHILD ----- */}
-          <Spacer name="md" ref={ref} func={funcMsg}></Spacer>
+          <Spacer name="md"></Spacer>
           <motion.p
             variants={child}
             // initial="hidden"
