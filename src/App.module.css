@@ -12,6 +12,7 @@ html {
   width: 100%;
   overflow: auto;
   background-color: #0a0a0a;
+  overflow-x: hidden;
 }
 
 /* .main::after {
@@ -31,8 +32,6 @@ strong {
 .clear {
   clear: both;
 }
-
-
 
 @media only screen and (max-width: 1920px) {
   html {

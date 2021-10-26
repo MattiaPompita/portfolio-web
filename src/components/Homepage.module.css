@@ -15,12 +15,12 @@
   position: fixed;
   animation: grain 24s steps(25) infinite;
 }  */
- .header {
-   overflow: hidden;
- }
+.header {
+  overflow: hidden;
+}
 
 .header h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #f1fffa;
   line-height: 4rem;
@@ -40,7 +40,7 @@
   animation: widthAnimation 2.5s ease-in-out 0s 1 normal forwards;
 }
 
-.scrollDown{
+.scrollDown {
   color: rgba(241, 255, 250, 0.58);
   font-size: 1rem;
   font-weight: 400;
@@ -76,6 +76,12 @@
 }
 
 /*------- MEDIA QUERY -------*/
+
+@media only screen and (max-width: 1920px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+}
 
 @keyframes widthAnimation {
   from {
@@ -132,4 +138,3 @@
     transform: translate(-10%, 10%);
   }
 }
-

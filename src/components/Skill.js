@@ -24,7 +24,7 @@ const Skill = () => {
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
     },
     visible: {
-      opacity:1,
+      opacity: 1,
       transition: {
         staggerChildren: 0.3,
         ease: [0.455, 0.03, 0.515, 0.955],
@@ -39,9 +39,12 @@ const Skill = () => {
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
     },
     visible: {
-      opacity:1,
+      opacity: 1,
       y: 0,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.75,
+      },
     },
   };
 
@@ -52,7 +55,6 @@ const Skill = () => {
     if (inView) {
       controls.start("visible");
     }
-    
   }, [controls, inView]);
 
   return (
@@ -64,11 +66,7 @@ const Skill = () => {
           initial="hidden"
           animate={controls}
         >
-          <motion.h3
-            ref={ref}
-            variants={child}
-            className={style.title}
-          >
+          <motion.h3 ref={ref} variants={child} className={style.title}>
             Skills <br /> Tools
           </motion.h3>
           <Spacer name={"xl"}></Spacer>
